@@ -4,7 +4,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const assert_1 = __importDefault(require("assert"));
-// ... Ton code ici ...
 class BankCustomer {
     constructor(name, code) {
         this.name = name;
@@ -14,7 +13,12 @@ class BankCustomer {
         return this.name;
     }
     verifyPinInput(pinInput) {
-        return pinInput === this.code;
+        if (pinInput === this.code) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 }
 // Tests
